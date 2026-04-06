@@ -20,6 +20,7 @@ jobs:
         run: |
           echo "${{ secrets.SFDX_AUTH_URL }}" > sfdx_auth_url.txt
           sf org login sfdx-url --sfdx-url-file sfdx_auth_url.txt --alias DevOrg
+          sf config set target-org DevOrg
 
       - name: Deploy Metadata
-        run: sf project deploy start
+        run: sf project deploy start --source-dir force-app
