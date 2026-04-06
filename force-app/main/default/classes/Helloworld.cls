@@ -1,7 +1,7 @@
 public class Helloworld {
 
     public static String sayHello() {
-        return 'Hello DevOps Learning!';
+        return 'Hello CI/CD Pipeline!';
     }
 
 }
